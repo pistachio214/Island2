@@ -4,6 +4,9 @@
  Godot4.4 创建的2D游戏
 ```
 
+用到的素材下载地址：[timothyqiu大佬留下的素材下载地址]https://pan.baidu.com/s/10zscsXNoK5wclaP4QvSI1g?pwd=kmew
+
+
 跟着 [timothyqiu](https://github.com/timothyqiu)大佬的《迷失岛2》教程复刻的C#版本
 
 
