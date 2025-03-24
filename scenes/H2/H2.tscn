@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://dxe1ntrnom8gn"]
+
+[ext_resource type="PackedScene" uid="uid://dtqyoxd77nwp" path="res://scenes/Scene.tscn" id="1_d3lug"]
+[ext_resource type="Script" uid="uid://cnjsw3el0adjt" path="res://scenes/H2/H2.cs" id="2_qypc5"]
+[ext_resource type="Texture2D" uid="uid://cq8yfod5h8lto" path="res://assets/H2/H2.png" id="2_wuv1s"]
+[ext_resource type="PackedScene" uid="uid://ch1fdut2kv2re" path="res://scenes/Teleporter/Teleporter.tscn" id="2_yynoc"]
+[ext_resource type="PackedScene" uid="uid://d2v6qwjqm3uc3" path="res://scenes/Teleporter/TeleporterStaircase.tscn" id="4_wuv1s"]
+[ext_resource type="Script" uid="uid://cbpxeebxt7oy3" path="res://scenes/H2/Granny.cs" id="6_fk5kt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wuv1s"]
+size = Vector2(210.25, 370.5)
+
+[node name="Scene" instance=ExtResource("1_d3lug")]
+script = ExtResource("2_qypc5")
+
+[node name="BgImage" parent="." index="0"]
+texture = ExtResource("2_wuv1s")
+
+[node name="TeleporterLeft" parent="." index="1" instance=ExtResource("2_yynoc")]
+position = Vector2(282, 212)
+targetPath = "uid://depexb1ucn8y6"
+
+[node name="TeleporterStaircase" parent="." index="2" instance=ExtResource("4_wuv1s")]
+position = Vector2(996, 319)
+targetPath = "uid://b1klxx2iwuaik"
+
+[node name="TeleporterRight" parent="." index="3" instance=ExtResource("2_yynoc")]
+position = Vector2(1704, 563)
+targetPath = "uid://v7alirx5f85p"
+
+[node name="Granny" type="Area2D" parent="." index="4"]
+script = ExtResource("6_fk5kt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Granny" index="0"]
+position = Vector2(526.875, 509.75)
+shape = SubResource("RectangleShape2D_wuv1s")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtqyoxd77nwp"]
+
+[ext_resource type="Script" uid="uid://d3skkav73mk2u" path="res://scenes/Scene.cs" id="1_20oit"]
+[ext_resource type="PackedScene" uid="uid://bvk2u6bhjbj16" path="res://scenes/BgImage/BgImage.tscn" id="1_dvpi0"]
+
+[node name="Scene" type="Node2D"]
+script = ExtResource("1_20oit")
+
+[node name="BgImage" parent="." instance=ExtResource("1_dvpi0")]
+position = Vector2(960, 540)

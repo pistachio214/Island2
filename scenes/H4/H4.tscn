@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://v7alirx5f85p"]
+
+[ext_resource type="PackedScene" uid="uid://dtqyoxd77nwp" path="res://scenes/Scene.tscn" id="1_4oh6d"]
+[ext_resource type="Texture2D" uid="uid://d3ldutbucp6jm" path="res://assets/H4/H4.png" id="2_lan4d"]
+[ext_resource type="PackedScene" uid="uid://d2v6qwjqm3uc3" path="res://scenes/Teleporter/TeleporterStaircase.tscn" id="4_rtapg"]
+
+[node name="Scene" instance=ExtResource("1_4oh6d")]
+
+[node name="BgImage" parent="." index="0"]
+texture = ExtResource("2_lan4d")
+
+[node name="TeleporterStaircase" parent="." index="1" instance=ExtResource("4_rtapg")]
+position = Vector2(1277, 369)
+targetPath = "uid://dxe1ntrnom8gn"

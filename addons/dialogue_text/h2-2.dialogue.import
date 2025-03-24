@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://bhfkwpskuvvqa"
+path="res://.godot/imported/h2-2.dialogue-f2b1a59f9ac186f85fc55820d54e2b0d.tres"
+
+[deps]
+
+source_file="res://addons/dialogue_text/h2-2.dialogue"
+dest_files=["res://.godot/imported/h2-2.dialogue-f2b1a59f9ac186f85fc55820d54e2b0d.tres"]
+
+[params]
+
+defaults=true
