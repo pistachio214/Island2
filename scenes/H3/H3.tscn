@@ -10,5 +10,5 @@
 texture = ExtResource("2_u7lru")
 
 [node name="TeleporterStaircase" parent="." index="1" instance=ExtResource("3_tjmv6")]
-position = Vector2(1823, 903)
+position = Vector2(1830, 950)
 targetPath = "uid://dxe1ntrnom8gn"
