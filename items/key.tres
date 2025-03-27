@@ -1,11 +1,12 @@
-[gd_resource type="Resource" load_steps=4 format=3 uid="uid://xylslic1ar2d"]
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cfn15o3mqgo60"]
 
-[ext_resource type="Texture2D" uid="uid://brsacqn0ksllj" path="res://assets/H2/key_prop.png" id="1_d1xeg"]
-[ext_resource type="Script" uid="uid://dvpsyphto3oko" path="res://items/Item.cs" id="1_uqc2c"]
-[ext_resource type="Texture2D" uid="uid://birxm48o2bm2r" path="res://assets/H2/key.png" id="2_lqh7e"]
+[ext_resource type="Script" uid="uid://dvpsyphto3oko" path="res://items/Item.cs" id="1_2iida"]
+[ext_resource type="Texture2D" uid="uid://cr8qu02arl5ra" path="res://assets/H2/key_prop.png" id="1_ysu01"]
+[ext_resource type="Texture2D" uid="uid://8yahl6jwa1jc" path="res://assets/H2/key.png" id="2_461kk"]
 
 [resource]
-script = ExtResource("1_uqc2c")
-description = "信箱钥匙"
-propTexture = ExtResource("1_d1xeg")
-sceneTexture = ExtResource("2_lqh7e")
+script = ExtResource("1_2iida")
+Description = "信封钥匙"
+PropTexture = ExtResource("1_ysu01")
+SceneTexture = ExtResource("2_461kk")
+metadata/_custom_type_script = "uid://dvpsyphto3oko"
