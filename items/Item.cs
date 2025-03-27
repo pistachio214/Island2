@@ -1,6 +1,7 @@
 using Godot;
 using System;
 
+[Tool]
 [GlobalClass] // 让Godot 识别此类为可导出类型
 public partial class Item : Resource
 {

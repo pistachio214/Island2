@@ -19,48 +19,33 @@ public partial class SceneItem : Interactable
 
 	private void SetCurrentItem(Resource value)
 	{
-		// 类型检查
-		if (value != null && value is not Item)
-		{
-			GD.PushError($"类型错误！需要Item类型，但得到 {value.GetType().Name}");
-			return;
-		}
+		if (value == null) return;
 
 		// 更新资源引用
 		_currentItem = value;
 
-		// 编辑器模式和运行时都执行
-		if (CurrentItem != null)
-		{
-			SetTexture(CurrentItem.SceneTexture);
+		Item item = value as Item;
 
-			// 通知编辑器更新属性列表
-			if (Engine.IsEditorHint())
-			{
-				NotifyPropertyListChanged();
-			}
-		}
+		SetTexture(item.SceneTexture);
+		NotifyPropertyListChanged(); // 手动要求检查器修改全部的属性
 	}
-
-	// private void SetCurrentItem(Item value)
-	// {
-	// 	if (_currentItem == value)
-	// 	{
-	// 		return;
-	// 	}
-
-	// 	_currentItem = value;
-
-
-	// 	SetTexture(_currentItem != null ? _currentItem.SceneTexture : null);
-
-	// 	NotifyPropertyListChanged(); // 手动要求检查器修改全部的属性
-
-	// }
 
 	public override void Interact()
 	{
 		base.Interact();
+
+		Sprite2D sprite = new()
+		{
+			Texture = CurrentItem.SceneTexture
+		};
+
+		GetParent().AddChild(sprite);
+		sprite.GlobalPosition = GlobalPosition;
+
+		Tween tween = sprite.CreateTween();
+		tween.SetEase(Tween.EaseType.In).SetTrans(Tween.TransitionType.Back);
+		tween.TweenProperty(sprite, "scale", Vector2.Zero, 0.15);
+		tween.TweenCallback(Callable.From(sprite.QueueFree));
 
 		QueueFree();
 	}
