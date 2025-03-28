@@ -1,16 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://dxe1ntrnom8gn"]
+[gd_scene load_steps=11 format=3 uid="uid://dxe1ntrnom8gn"]
 
 [ext_resource type="PackedScene" uid="uid://dtqyoxd77nwp" path="res://scenes/Scene.tscn" id="1_d3lug"]
 [ext_resource type="Script" uid="uid://cnjsw3el0adjt" path="res://scenes/H2/H2.cs" id="2_qypc5"]
-[ext_resource type="Texture2D" uid="uid://cq8yfod5h8lto" path="res://assets/H2/H2.png" id="2_wuv1s"]
+[ext_resource type="Texture2D" uid="uid://ei8neonyubfw" path="res://assets/H2/H2.png" id="2_wuv1s"]
 [ext_resource type="PackedScene" uid="uid://ch1fdut2kv2re" path="res://scenes/Teleporter/Teleporter.tscn" id="2_yynoc"]
 [ext_resource type="PackedScene" uid="uid://d2v6qwjqm3uc3" path="res://scenes/Teleporter/TeleporterStaircase.tscn" id="4_wuv1s"]
 [ext_resource type="Script" uid="uid://cbpxeebxt7oy3" path="res://scenes/H2/Granny.cs" id="6_fk5kt"]
 [ext_resource type="Script" uid="uid://b1ilqm00up6aj" path="res://scripts/SceneItem.cs" id="7_cioh0"]
-[ext_resource type="Texture2D" uid="uid://birxm48o2bm2r" path="res://assets/H2/key.png" id="8_nftda"]
-[ext_resource type="Resource" uid="uid://cfn15o3mqgo60" path="res://items/key.tres" id="8_sn18u"]
-[ext_resource type="Texture2D" uid="uid://bbn4143t54sri" path="res://assets/H4/mail_piece.png" id="9_58vym"]
-[ext_resource type="Resource" uid="uid://c5g5shckvlhfv" path="res://items/mail.tres" id="10_hk1jb"]
+[ext_resource type="Resource" uid="uid://cfn15o3mqgo60" path="res://items/key.tres" id="8_58vym"]
+[ext_resource type="Texture2D" uid="uid://8yahl6jwa1jc" path="res://assets/H2/key.png" id="8_nftda"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wuv1s"]
 size = Vector2(210.25, 370.5)
@@ -40,16 +38,9 @@ script = ExtResource("6_fk5kt")
 position = Vector2(526.875, 509.75)
 shape = SubResource("RectangleShape2D_wuv1s")
 
-[node name="SceneItemKey" type="Area2D" parent="." index="5"]
-position = Vector2(899, 736)
+[node name="SceneItem" type="Area2D" parent="." index="5"]
+position = Vector2(885, 887)
 script = ExtResource("7_cioh0")
-ItemResource = ExtResource("8_sn18u")
+ItemResource = ExtResource("8_58vym")
 Texture = ExtResource("8_nftda")
-metadata/_custom_type_script = "uid://b1ilqm00up6aj"
-
-[node name="SceneItemMail" type="Area2D" parent="." index="6"]
-position = Vector2(1150, 776)
-script = ExtResource("7_cioh0")
-ItemResource = ExtResource("10_hk1jb")
-Texture = ExtResource("9_58vym")
 metadata/_custom_type_script = "uid://b1ilqm00up6aj"

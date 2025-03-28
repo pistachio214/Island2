@@ -57,7 +57,6 @@ public partial class Interactable : Area2D
 
     public override void _Ready()
     {
-        GD.Print("Tool script is alive in editor: ", Engine.IsEditorHint());
     }
 
     public override void _InputEvent(Viewport viewport, InputEvent @event, int shapeIdx)
