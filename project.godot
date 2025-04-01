@@ -19,8 +19,9 @@ config/icon="res://icon.svg"
 
 Game="*res://scripts/Game.cs"
 DiaManager="*res://scripts/DiaManager.cs"
-SceneChange="*res://scenes/SceneChange/SceneChange.tscn"
+SceneChange="*res://scenes/UI/SceneChange/SceneChange.tscn"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+Hud="*res://scenes/UI/HUD/Hud.tscn"
 
 [dialogue_manager]
 

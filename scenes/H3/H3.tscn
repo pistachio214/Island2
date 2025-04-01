@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://b1klxx2iwuaik"]
 
 [ext_resource type="PackedScene" uid="uid://dtqyoxd77nwp" path="res://scenes/Scene.tscn" id="1_ugrsl"]
-[ext_resource type="Texture2D" uid="uid://8sk3q4xcdn8t" path="res://assets/H3/H3.png" id="2_u7lru"]
-[ext_resource type="PackedScene" uid="uid://d2v6qwjqm3uc3" path="res://scenes/Teleporter/TeleporterStaircase.tscn" id="3_tjmv6"]
+[ext_resource type="Texture2D" uid="uid://bw7nbfd0guciw" path="res://assets/H3/H3.png" id="2_u7lru"]
+[ext_resource type="PackedScene" uid="uid://d2v6qwjqm3uc3" path="res://scenes/UI/Teleporter/TeleporterStaircase.tscn" id="3_tjmv6"]
 
 [node name="Scene" instance=ExtResource("1_ugrsl")]
 

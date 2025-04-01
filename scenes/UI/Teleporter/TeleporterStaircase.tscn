@@ -1,12 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://d2v6qwjqm3uc3"]
 
-[ext_resource type="Script" uid="uid://pyql1x3rail1" path="res://scenes/Teleporter/Teleporter.cs" id="1_lylmy"]
+[ext_resource type="Script" uid="uid://pyql1x3rail1" path="res://scenes/UI/Teleporter/Teleporter.cs" id="1_lylmy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lafd5"]
 size = Vector2(195, 358)
 
 [node name="TeleporterStaircase" type="Area2D"]
 script = ExtResource("1_lylmy")
+allowItem = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_lafd5")

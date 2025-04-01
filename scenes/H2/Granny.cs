@@ -5,6 +5,7 @@ public partial class Granny : Area2D
 {
 
 	private Resource grannyDialogueResource = GD.Load<Resource>("res://addons/dialogue_text/h2-1.dialogue");
+	private Resource grannyMailDialogueResource = GD.Load<Resource>("res://addons/dialogue_text/h2-2.dialogue");
 
 	public override void _InputEvent(Viewport viewport, InputEvent @event, int shapeIdx)
 	{
@@ -18,6 +19,27 @@ public partial class Granny : Area2D
 
 	private void GrannySayDialogue()
 	{
-		DiaManager.Instance.EmitSignal(DiaManager.SignalName.OnGrannyDialogue, grannyDialogueResource);
+		string flag = "mail_acceped";
+		Item item = Game.Inventory.AcctiveItem;
+		if (item != null)
+		{
+			if (item == GD.Load<Item>("res://items/mail.tres"))
+			{
+				Game.Flags.Add(flag);
+				Game.Inventory.RemoveItem(item);
+			}
+			else
+			{
+				return;
+			}
+		}
+
+		Resource sayResource = grannyDialogueResource;
+		if (Game.Flags.Has(flag))
+		{
+			sayResource = grannyMailDialogueResource;
+		}
+
+		DiaManager.Instance.EmitSignal(DiaManager.SignalName.OnGrannyDialogue, sayResource);
 	}
 }

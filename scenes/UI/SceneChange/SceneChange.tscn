@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://chrb7wetmjp2i"]
 
-[ext_resource type="Script" uid="uid://b54o0kbxin02b" path="res://scenes/SceneChange/SceneChange.cs" id="1_jutpl"]
+[ext_resource type="Script" uid="uid://b54o0kbxin02b" path="res://scenes/UI/SceneChange/SceneChange.cs" id="1_jutpl"]
 
 [node name="SceneChange" type="CanvasLayer"]
 layer = 90

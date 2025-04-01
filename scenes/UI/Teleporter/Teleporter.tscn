@@ -1,12 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://ch1fdut2kv2re"]
 
-[ext_resource type="Script" uid="uid://pyql1x3rail1" path="res://scenes/Teleporter/Teleporter.cs" id="1_s5tow"]
+[ext_resource type="Script" uid="uid://pyql1x3rail1" path="res://scenes/UI/Teleporter/Teleporter.cs" id="1_s5tow"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_20oit"]
 radius = 53.0094
 
 [node name="Teleporter" type="Area2D"]
 script = ExtResource("1_s5tow")
+allowItem = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_20oit")

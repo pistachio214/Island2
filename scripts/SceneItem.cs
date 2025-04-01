@@ -30,9 +30,18 @@ public partial class SceneItem : Interactable
 		NotifyPropertyListChanged(); // 手动要求检查器修改全部的属性
 	}
 
+	public override void _Ready()
+	{
+		if (Engine.IsEditorHint()) return;
+		if (Game.Flags.Has(GetFlag())) QueueFree();
+	}
+
 	public override void Interact()
 	{
 		base.Interact();
+
+		Game.Flags.Add(GetFlag());
+		Game.Inventory.AddItem(CurrentItem);
 
 		Sprite2D sprite = new()
 		{
@@ -48,5 +57,11 @@ public partial class SceneItem : Interactable
 		tween.TweenCallback(Callable.From(sprite.QueueFree));
 
 		QueueFree();
+	}
+
+	private string GetFlag()
+	{
+		string fileName = _currentItem.ResourcePath.GetFile();
+		return $"picked:{fileName}";
 	}
 }
