@@ -13,6 +13,7 @@ size = Vector2(134, 179)
 
 [node name="Mailbox" type="Node2D"]
 script = ExtResource("1_ojbho")
+flag = "mailbox_unlocked"
 metadata/_custom_type_script = "uid://xtqri4vdt3oh"
 
 [node name="MailBoxClose" type="Sprite2D" parent="."]
@@ -21,7 +22,6 @@ texture = ExtResource("2_0n2m2")
 
 [node name="Interactable" type="Area2D" parent="MailBoxClose"]
 script = ExtResource("3_caphp")
-allowItem = true
 metadata/_custom_type_script = "uid://bo6fc5v8jraug"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MailBoxClose/Interactable"]

@@ -18,10 +18,12 @@ config/icon="res://icon.svg"
 [autoload]
 
 Game="*res://scripts/Game.cs"
-DiaManager="*res://scripts/DiaManager.cs"
+SignalBus="*res://scripts/signals/SignalBus.cs"
+DialogueBus="*res://scripts/signals/DialogueBus.cs"
+InventoryBus="*res://scripts/signals/InventoryBus.cs"
 SceneChange="*res://scenes/UI/SceneChange/SceneChange.tscn"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-Hud="*res://scenes/UI/HUD/Hud.tscn"
+Hud="res://scenes/UI/HUD/Hud.tscn"
 
 [dialogue_manager]
 

@@ -9,10 +9,9 @@ public partial class H2 : Scene
 	{
 		base._Ready();
 
-		DiaManager.Instance.Connect(DiaManager.SignalName.OnGrannyDialogue, Callable.From<Resource>(OnGrannyDialogueAction));
+		DialogueBus.Instance.Connect(DialogueBus.SignalName.OnGrannyDialogue, Callable.From<Resource>(OnGrannyDialogueAction));
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
 	}

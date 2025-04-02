@@ -40,6 +40,6 @@ public partial class Granny : Area2D
 			sayResource = grannyMailDialogueResource;
 		}
 
-		DiaManager.Instance.EmitSignal(DiaManager.SignalName.OnGrannyDialogue, sayResource);
+		DialogueBus.Instance.EmitSignal(DialogueBus.SignalName.OnGrannyDialogue, sayResource);
 	}
 }

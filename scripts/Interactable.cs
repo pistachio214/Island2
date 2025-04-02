@@ -5,9 +5,6 @@ using System;
 [GlobalClass]
 public partial class Interactable : Area2D
 {
-    [Signal]
-    public delegate void OnInteractSceneEventHandler();
-
     [Export]
     public bool allowItem = false;
 
@@ -73,6 +70,6 @@ public partial class Interactable : Area2D
 
     public virtual void Interact()
     {
-        EmitSignal(SignalName.OnInteractScene);
+        InventoryBus.Instance.EmitSignal(InventoryBus.SignalName.OnInteractScene);
     }
 }

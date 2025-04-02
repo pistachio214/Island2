@@ -4,25 +4,23 @@ using System.Collections.Generic;
 
 public partial class Game : Node
 {
-	public static Game Instance { get; private set; }
-
 	// 公共静态属性，暴露 Flags 实例
 	public static Flags Flags { get; } = new Flags();
 
 	// 公共静态属性，暴露 Inventory 实例
 	public static Inventory Inventory { get; } = new Inventory();
 
-	public override void _Ready()
+	// 单例访问
+	private static Game _instance;
+	public static Game Instance => _instance;
+
+	public override void _EnterTree()
 	{
-		// 初始化单例
-		if (Instance == null)
-		{
-			Instance = this;
-		}
+		// 确保单例唯一性
+		if (_instance != null)
+			QueueFree();
 		else
-		{
-			QueueFree(); // 防止重复创建
-		}
+			_instance = this;
 	}
 }
 
@@ -74,7 +72,7 @@ public partial class Inventory : Node
 		// 检查当前索引是否越界
 		if (_currentItemIndex >= _items.Count)
 		{
-			_currentItemIndex = _items.Count >= 0 ? 0 : -1;
+			_currentItemIndex = _items.Count > 0 ? 0 : -1;
 		}
 
 		EmitSignal(SignalName.OnInventoryChanged, false);
